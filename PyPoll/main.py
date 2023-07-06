@@ -45,7 +45,19 @@ with open(csvpath, encoding="utf8") as csvfile:
     percent_votes_C = round(percent_votes["Charles Casper Stockham"], 2)
     percent_votes_D = round(percent_votes["Diana DeGette"], 2)
     percent_votes_R = round(percent_votes["Raymon Anthony Doane"], 2)
-    
+
+    print("Election Results")
+    print("-------------------------")
+    print(f"Total Votes: {total_votes}")
+    print("-------------------------")
+    print(f"Charles Casper Stockham: {percent_votes_C}% ({candidates['Charles Casper Stockham']})")
+    print(f"Diana DeGette:  {percent_votes_D}% ({candidates['Diana DeGette']})")
+    print(f"Raymon Anthony Doane: {percent_votes_R}% ({candidates['Raymon Anthony Doane']})")
+    print("-------------------------")
+    print(f"Winner: {winner}")
+    print("-------------------------")
+
+    #export text file
     PyPoll = os.path.join("analysis", "PyPoll.txt")
     with open(PyPoll, 'w') as out_file:
         writer = csv.writer(out_file)
