@@ -57,6 +57,6 @@ with open(csvpath, encoding="utf8") as csvfile:
         writer.writerow(["----------------------------"])
         writer.writerow([f"Total Months: {total_month}"])
         writer.writerow([f"Net Total: ${total_price}"])
-        writer.writerow([f"Average Change: ${avg_price: .2f}"]) #rounding 2 decimal places in the f-string was taken from stackoverflow https://stackoverflow.com/questions/45310254/fixed-digits-after-decimal-with-f-strings
+        writer.writerow([f"Average Change: ${avg_price: .2f}"]) #rounding 2 decimal places in the f-string was taken from stackoverflow
         writer.writerow([f"Greatest Increase in Profits: {max_row[0]}", f" ${max_row[1]}"])
         writer.writerow([f"Greatest Decrease in Profits: {min_row[0]}", f" ${min_row[1]}"])
