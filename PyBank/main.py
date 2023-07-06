@@ -48,6 +48,14 @@ with open(csvpath, encoding="utf8") as csvfile:
         net_total += num
     #calculate the average change of the changes in profits/losses over time
     avg_price = net_total/(total_month-1)
+
+    print("Financial Analysis")
+    print("----------------------------")
+    print(f"Total Months: {total_month}")
+    print(f"Net Total: ${total_price}")
+    print(f"Average Change: ${avg_price: .2f}") #rounding 2 decimal places in the f-string was taken from stackoverflow
+    print(f"Greatest Increase in Profits: {max_row[0]}", f" ${max_row[1]}")
+    print(f"Greatest Decrease in Profits: {min_row[0]}", f" ${min_row[1]}")
     
     #export text file
     PyBook = os.path.join("analysis", "PyBook.txt")
